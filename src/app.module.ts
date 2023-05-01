@@ -1,13 +1,13 @@
-import { Module, Provider } from '@nestjs/common';
+import { Module, Provider, Type } from '@nestjs/common';
 import { AppController } from '@root/app.controller';
-import { UsersModule } from '@root/users/users.module';
-import { AuthModule } from '@root/auth/auth.module';
+import { DatabaseModule } from '@database/database.module';
+import { FeaturesModule } from '@features/features.module';
 
-function modules(): any[] {
-  return [UsersModule, AuthModule];
+function modules(): Type[] {
+  return [DatabaseModule, FeaturesModule];
 }
 
-function controllers(): any[] {
+function controllers(): Type[] {
   return [AppController];
 }
 
@@ -19,5 +19,6 @@ function services(): Provider[] {
   imports: [...modules()],
   controllers: [...controllers()],
   providers: [...services()],
+  exports: [...services()],
 })
 export class AppModule {}
