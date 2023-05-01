@@ -1,5 +1,4 @@
 import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
-import { UserCreateDto } from '@features/users/dto/user-create.dto';
 
 @Index('idx_email', ['email'])
 @Entity('users')
