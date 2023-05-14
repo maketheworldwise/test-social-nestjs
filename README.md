@@ -62,8 +62,8 @@ create table user_social_keys
 
 ## Naver-dynamic
 
-- 발급받은 키를 동적으로 넣어 전략을 구성할 경우, users 및 user_social_keys 테이블에 데이터가 필요함
-- 반드시 user_social_keys 테이블의 callback_url 뒤에는 userId가 붙어야하며, 해당 url도 네이버에 등록해주어야 함 
+- 발급받은 키를 동적으로 넣어 전략을 구성할 경우, users 및 user_social_keys 테이블에 데이터가 필요합니다.
+- 반드시 user_social_keys 테이블의 callback_url 뒤에는 userId가 붙어야하며, 해당 url도 네이버에 등록해주어야 합니다. 
   - http://127.0.0.1/auth/naver/dynamic?userId=1
 
 ![](./docs/images/nd-1.png)
