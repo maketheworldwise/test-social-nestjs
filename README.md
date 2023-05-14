@@ -17,6 +17,16 @@
 ![](./docs/images/k-5.png)
 ![](./docs/images/k-6.png)
 
+## Google
+
+![](./docs/images/g-1.png)
+![](./docs/images/g-2.png)
+![](./docs/images/g-3.png)
+![](./docs/images/g-4.png)
+![](./docs/images/g-5.png)
+![](./docs/images/g-6.png)
+![](./docs/images/g-7.png)
+
 ## Reference
 
 - http://www.passportjs.org/packages/passport-naver/

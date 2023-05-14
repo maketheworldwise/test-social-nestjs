@@ -30,5 +30,10 @@ export const env = {
       clientSecret: process.env.KAKAO_CLIENT_SECRET,
       callbackURL: process.env.KAKAO_CALLBACK_URL,
     },
+    google: {
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      callbackURL: process.env.GOOGLE_CALLBACK_URL,
+    },
   },
 };
