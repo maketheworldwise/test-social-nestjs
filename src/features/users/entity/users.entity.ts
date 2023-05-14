@@ -1,4 +1,11 @@
-import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { UserSocialKeysEntity } from '@features/user-social-keys/entity/user-social-keys.entity';
 
 @Index('idx_email', ['email'])
 @Entity('users')
@@ -34,6 +41,11 @@ export class UsersEntity {
     default: () => 'CURRENT_TIMESTAMP',
   })
   updatedAt: Date;
+
+  @OneToMany(() => UserSocialKeysEntity, (entity) => entity.user, {
+    lazy: true,
+  })
+  socialKeys: UserSocialKeysEntity[];
 
   static from(dto: any): UsersEntity {
     const entity = new UsersEntity();

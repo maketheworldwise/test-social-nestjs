@@ -6,9 +6,10 @@ import { JwtModule } from '@nestjs/jwt';
 import { env } from '@root/config/env.config';
 import { JwtStrategy } from '@features/auth/standard/jwt.strategy';
 import { PassportModule } from '@nestjs/passport';
+import { NaverDynamicModule } from './naver-dynamic/naver-dynamic.module';
 
 function modules(): Type[] {
-  return [GoogleModule, KakaoModule, NaverModule];
+  return [GoogleModule, KakaoModule, NaverModule, NaverDynamicModule];
 }
 
 function services(): Provider[] {
